@@ -51,10 +51,10 @@ app.post('/work', function(req, res) {
       collection.insert([user1, user2, user3], function (err, result) {
         if (err) {
           console.log(err);
-        } else {
-          console.log('Inserted documents into the "users" collection.');
         }
       });
+      console.log('Inserted documents into the "users" collection.');
+
       //Close connection
       db.close();
       res.sendStatus(200);
